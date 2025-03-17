@@ -12,12 +12,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: 
-          <Color>[Color(0xFF00457D), Colors.blue],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter
-        ),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: <Color>[Color(0xFF00457D), Color(0xFF05051F)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -25,9 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
             spacing: 30.0,
             children: [
               SizedBox(height: 30),
-              Icon(Icons.lock, size: 45.0),
-              FlutterLogo(size: 90.0),
-              Text('Boas-vindas!'),
+              Image.asset("assets/logo_climapp.png", width: 100.0),
+              Image.asset("assets/ilustracao_home.png", height: 150.0),
+              Text('Boas-vindas!', style: TextStyle(color: Colors.white)),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
